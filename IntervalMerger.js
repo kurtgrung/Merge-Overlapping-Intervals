@@ -25,7 +25,5 @@ const intervals = [[1, 3], [2, 6], [8, 10], [15, 18]];
 const intervalMerger = new IntervalMerger();
 const updatedIntervals = intervalMerger.merge(intervals);
 
-// output
 console.log(updatedIntervals);
 console.log(`Updated Intervals: ${JSON.stringify(updatedIntervals)}`);
-document.getElementById("output").innerHTML = `Updated Intervals: ${JSON.stringify(updatedIntervals)}`;
