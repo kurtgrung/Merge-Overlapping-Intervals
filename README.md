@@ -2,6 +2,9 @@
 
 Overall, this code follows the Open/Closed Principle by encapsulating the merging logic in a separate class (IntervalMerger) and method (merge) while allowing for easy extension and modification of the merging behavior in the future without modifying the existing code.
 
+Codepen of the snippet running: <br>
+https://codepen.io/kurtgrung/pen/ExGRKyO
+
 ### IntervalMerger Class:
 A class called IntervalMerger that will encapsulate the logic for merging intervals.
 
@@ -24,4 +27,4 @@ The return function of merged intervals.
 Create an instance of IntervalMerger and call the merge method with the input array of intervals to obtain the merged intervals.
 
 ### Output:
-The merged intervals are logged to the console and HTML.
+The merged intervals are logged to the console.
