@@ -61,30 +61,7 @@
     </div>
 
     <script type="module">
-        class IntervalMerger {
-            merge(intervals) {
-                if (intervals.length <= 1) return intervals;
-
-                const mergedIntervals = [];
-                intervals.sort((a, b) => a[0] - b[0]);
-
-                intervals.forEach((currentInterval, i) => {
-                    if (mergedIntervals.length > 0) {
-                        const previousInterval = mergedIntervals[mergedIntervals.length - 1];
-                        
-                        if (currentInterval[0] <= previousInterval[1]) {
-                            previousInterval[1] = Math.max(previousInterval[1], currentInterval[1]);
-                        } else {
-                            mergedIntervals.push(currentInterval);
-                        }
-                    } else {
-                        mergedIntervals.push(currentInterval);
-                    }
-                });
-
-                return mergedIntervals;
-            }
-        }
+        import IntervalMerger from './IntervalMerger.js';
 
         const intervalMerger = new IntervalMerger();
         const mergeBtn = document.getElementById('mergeBtn');

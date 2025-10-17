@@ -29,3 +29,4 @@ const updatedIntervals = intervalMerger.merge(intervals);
 
 console.log(updatedIntervals);
 console.log(`Updated Intervals: ${JSON.stringify(updatedIntervals)}`);
+export default IntervalMerger;
