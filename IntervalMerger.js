@@ -5,13 +5,15 @@ class IntervalMerger {
         const mergedIntervals = [];
         intervals.sort((a, b) => a[0] - b[0]);
 
-        intervals.forEach(function (currentInterval, i) {
-
-            const previousInterval = //Conditional (ternary) operator
-                i > 0 ? mergedIntervals[mergedIntervals.length - 1] : 0;
-
-            if (currentInterval[0] <= previousInterval[1]) {
-                previousInterval[1] = Math.max(previousInterval[1], currentInterval[1]);
+        intervals.forEach((currentInterval, i) => {
+            if (mergedIntervals.length > 0) {
+                const previousInterval = mergedIntervals[mergedIntervals.length - 1];
+                
+                if (currentInterval[0] <= previousInterval[1]) {
+                    previousInterval[1] = Math.max(previousInterval[1], currentInterval[1]);
+                } else {
+                    mergedIntervals.push(currentInterval);
+                }
             } else {
                 mergedIntervals.push(currentInterval);
             }
